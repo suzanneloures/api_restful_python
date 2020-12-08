@@ -11,4 +11,5 @@ class Request(models.Model):
     is_approved = models.BooleanField(default=False, blank=True,null=True)
     limit_credit = models.DecimalField(max_digits=8, decimal_places=2, blank=True,null=True)
 
-
+    class Meta:
+        db_table = "requests_request"

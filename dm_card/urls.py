@@ -16,14 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from dm_card.requests.api import viewsets as requestsviewsets
+from dm_card.solicitations.api import viewsets as solicitationsviewsets
+from .solicitations import views
 
 
 route = routers.DefaultRouter()
-route.register(r'request', requestsviewsets.RequestViewSet, basename="Request")
-
+route.register(r'solicitation', solicitationsviewsets.RequestViewSet, basename="Solicitation")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(route.urls))
+    path('api/', include(route.urls)),
+   
 ]

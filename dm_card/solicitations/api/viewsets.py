@@ -33,8 +33,10 @@ class RequestViewSet(viewsets.ViewSet):
         
 
     def destroy(self, request, pk=None):
-        pass
-
+        queryset = Request.objects.get(pk=pk)
+        queryset.delete()
+        return Response({"msg": "Solicitação excluida com sucesso"},status=status.HTTP_200_OK)
+        
     def verify_score(self):
         score = random.randint(1, 999)
         return score
