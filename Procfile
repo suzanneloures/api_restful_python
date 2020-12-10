@@ -1,1 +1,0 @@
-web: gunicorn --pythonpath api dm_card.wsgi
