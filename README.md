@@ -1,10 +1,10 @@
 # api_restful_python
 Essa aplicação realiza solicitações de um cartão de crédito. O usuário insere suas informações como nome, email e cpf e o sistema irá fazer uma análise da liberação do cartão. A aplicação também contém uma pagina de gerenciamento das solicitações onde é possivel visualizar, adicionar e excluir.
 ### Estrutura do projeto
-- api
+- api :
 API REST densenvolvida com Python utilizando Django Rest Framework;
 
-- web_app
+- web_app :
 Pagina web que utilizará a API com Bootstrap e Jquery. Realizando: Visualização, Cadastro, Exclusão;
 
 ### Documentação da API
